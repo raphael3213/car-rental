@@ -25,8 +25,8 @@ export default function SearchBar() {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (manufacturer === "" && model === "") {
-      return alert("Please fill in the search bar");
+    if (manufacturer === "" || model === "") {
+      return alert("Please fill both Manudacturer and Model");
     }
 
     updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());
@@ -51,7 +51,7 @@ export default function SearchBar() {
       window.location.pathname
     }?${searchParams.toString()}`;
 
-    router.push(newPathname);
+    router.push(newPathname, { scroll: false });
   };
   return (
     <form className="searchbar" onSubmit={handleSearch}>

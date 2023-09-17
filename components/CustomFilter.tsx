@@ -17,7 +17,7 @@ function CustomFilter({ title, options }: CustomFilterProps) {
     const newPathname = `${
       window.location.pathname
     }?${searchParams.toString()}`;
-    router.push(newPathname);
+    router.push(newPathname, { scroll: false });
   };
   return (
     <div className="w-fit">
