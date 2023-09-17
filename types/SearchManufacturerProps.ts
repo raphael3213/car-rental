@@ -1,4 +1,4 @@
 interface SearchManufacturerProps {
   manufacturer: string;
-  setManufacturer(): void;
+  setManufacturer(manufacturer: string): void;
 }
