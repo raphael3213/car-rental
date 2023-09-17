@@ -12,7 +12,7 @@ function CarDetails({ car, isOpen, closeModal }: CardDetailsProps) {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-30" onClose={closeModal}>
           <div className="fixed inset-0 bg-black bg-opacity-25"></div>
 
           <Transition.Child

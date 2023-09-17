@@ -19,7 +19,7 @@ function SearchManufacturer({
             .includes(query.toLowerCase().replace(/\s+/g, ""))
         );
   return (
-    <div className="search-manufacturer z-50 relative">
+    <div className="search-manufacturer z-20 relative">
       <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
