@@ -19,7 +19,7 @@ function SearchManufacturer({
             .includes(query.toLowerCase().replace(/\s+/g, ""))
         );
   return (
-    <div className="search-manufacturer">
+    <div className="search-manufacturer z-50 relative">
       <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
@@ -44,11 +44,11 @@ function SearchManufacturer({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Combobox.Options className="bg-gray-100">
+            <Combobox.Options className="bg-gray-100  absolute w-full overflow-auto max-h-96 min-h-0">
               {filteredManufacturers.length === 0 && query !== "" ? (
                 <Combobox.Option
                   value={query}
-                  className="search-manufacturer__option z-10"
+                  className="search-manufacturer__option"
                 >
                   Create "{query}"
                 </Combobox.Option>
